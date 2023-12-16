@@ -1,84 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Calculator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 50px;
-    }
-
-    input {
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+	<meta charset="UTF-8">
+  <script src="main.js"></script>
+  <h1>勤務中のお手洗いにどれくらい給料が発生しているか調べよう！！</h1>
 </head>
+<title>Simple Calculator</title>
 <body>
+  <intoroduction>以下の質問には残業を含め、昼休みは除いて答えてください</intoroduction><br>
 
-  <h2>Simple Calculator</h2>
+  <form id="calculatorForm">
 
-  <input type="text" id="display" readonly>
+  <label for="workHours">１日の勤務時間はどれくらいですか？<br><input type="number" min="0" id="workHours"> 時間ほど</label><br>
 
-  <br><br>
+  <saraly>月給はどのくらいですか？<br><input type="number" min="0" id="monthlySalary">万円ほど</saraly><br>
 
-  <button onclick="appendNumber('1')">1</button>
-  <button onclick="appendNumber('2')">2</button>
-  <button onclick="appendNumber('3')">3</button>
-  <button onclick="appendOperator('+')">+</button>
+	<minutes>どれくらいお手洗いに行きますか？<br><input type="number" min="0" id="bathroomTime">分程</minutes><br>
 
-  <br>
+</form>
 
-  <button onclick="appendNumber('4')">4</button>
-  <button onclick="appendNumber('5')">5</button>
-  <button onclick="appendNumber('6')">6</button>
-  <button onclick="appendOperator('-')">-</button>
+<botton>
 
-  <br>
-
-  <button onclick="appendNumber('7')">7</button>
-  <button onclick="appendNumber('8')">8</button>
-  <button onclick="appendNumber('9')">9</button>
-  <button onclick="appendOperator('*')">*</button>
-
-  <br>
-
-  <button onclick="appendNumber('0')">0</button>
-  <button onclick="clearDisplay()">C</button>
-  <button onclick="calculateResult()">=</button>
-  <button onclick="appendOperator('/')">/</button>
-
-  <script>
-    function appendNumber(number) {
-      document.getElementById('display').value += number;
-    }
-
-    function appendOperator(operator) {
-      document.getElementById('display').value += operator;
-    }
-
-    function clearDisplay() {
-      document.getElementById('display').value = '';
-    }
-
-    function calculateResult() {
-      try {
-        const result = eval(document.getElementById('display').value);
-        document.getElementById('display').value = result;
-      } catch (error) {
-        document.getElementById('display').value = 'Error';
-      }
-    }
-  </script>
+  <button class="button" type="button" onclick="calculateSalary()">確定</button>
+  <script src="main.js"></script>
+</botton>
+  <div id="result"></div>
 
 </body>
-</html>
+
