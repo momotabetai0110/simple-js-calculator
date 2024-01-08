@@ -1,29 +1,58 @@
 <html>
+
 <head>
-	<meta charset="UTF-8">
-  <script src="main.js"></script>
-  <h1>勤務中のお手洗いにどれくらい給料が発生しているか調べよう！！</h1>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="main.js"></script><!--JSファイルを読み込む-->
+  <link rel="stylesheet" href="css/reset.css"><!--ダウンロードしたreset.cssを最初に読み込む-->
+  <link rel="stylesheet" href="css/index.css">
 </head>
-<title>Simple Calculator</title>
+<title>ゴミ給与明細算出機</title>
+
 <body>
-  <intoroduction>以下の質問には残業を含め、昼休みは除いて答えてください</intoroduction><br>
+  <div class = title>勤務中のお手洗いにどれくらい給料が発生しているか調べよう！！</div>
+    <div class ="question">以下の質問には残業を含め、昼休みは除いて答えてください</div><br>
 
-  <form id="calculatorForm">
+<!--スタート画面-->
+    <div id="start" style="display: block;">
+        <div class="button">
+          <ul>
+            <li type="button" onclick="start()">はじめる</li>
+          </ul>
+        </div>
+      </div>
 
-  <label for="workHours">１日の勤務時間はどれくらいですか？<br><input type="number" min="0" id="workHours"> 時間ほど</label><br>
+<!--質問１-->
+    <div id="question-container1" style="display: none;">
+    <div class="question_Q">1日の勤務時間はどれくらいですか？</div>
+     <div class="question_A"><label for="workHours"><input type="number" min="0" id="workHours"> 時間ほど</label><br></div>
+     <div class="button"><li type="button" onclick="next1()">次へ</li></div>
+     </div>
 
-  <saraly>月給はどのくらいですか？<br><input type="number" min="0" id="monthlySalary">万円ほど</saraly><br>
+<!--質問2-->
+<div id="question-container2" style="display: none;">
+     <div class="question_Q">月給はどのくらいですか？</div>
+     <div class="question_A"><input type="number" min="0" id="monthlySalary">万円ほど<br></div>
+     <div class="button"><li type="button" onclick="back1()">戻る</li></div>
+     <div class="button"><li type="button" onclick="next2()">次へ</li></div>
 
-	<minutes>どれくらいお手洗いに行きますか？<br><input type="number" min="0" id="bathroomTime">分程</minutes><br>
+</div>
 
-</form>
+<!--質問3-->
+<div id="question-container3" style="display: none;">
+     <div class="question_Q">どれくらいお手洗いに行きますか？</div>
+     <div class="question_B"><input type="number" min="0" id="bathroomTime">分程</div>
+     <div class="button"><li type="button" onclick="back2()">戻る</li></div>
+  <div class="button"><li type="button" onclick="calculateSalary()">確定</li></div>
+</div>
 
-<botton>
-
-  <button class="button" type="button" onclick="calculateSalary()">確定</button>
-  <script src="main.js"></script>
-</botton>
-  <div id="result"></div>
+<!--回答-->
+<div id="result-container" style="display: none;">
+  <div class="result"></div>
+    <div class="button"><li type="button" onclick="restart()">もう一回</li></div>
+</div>
 
 </body>
 
+<footer>
+</footer>
