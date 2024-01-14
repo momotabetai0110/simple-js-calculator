@@ -15,10 +15,8 @@
 
 <!--スタート画面-->
     <div id="start" style="display: block;">
-        <div class="button">
-          <ul>
-            <li type="button" onclick="start()">はじめる</li>
-          </ul>
+        <div class="button-container">
+            <div class="button"><a type="button" onclick="start()">はじめる</a></div>
         </div>
       </div>
 
@@ -26,29 +24,40 @@
     <div id="question-container1" style="display: none;">
     <div class="question_Q">1日の勤務時間はどれくらいですか？</div>
      <div class="question_A"><label for="workHours"><input type="number" min="0" id="workHours"> 時間ほど</label><br></div>
+
+     <div class="button-container">
+     <div class="button"><el type="button" > 戻る</el></div>
      <div class="button"><li type="button" onclick="next1()">次へ</li></div>
      </div>
+    </div>
 
 <!--質問2-->
 <div id="question-container2" style="display: none;">
      <div class="question_Q">月給はどのくらいですか？</div>
      <div class="question_A"><input type="number" min="0" id="monthlySalary">万円ほど<br></div>
-     <div class="button"><li type="button" onclick="back1()">戻る</li></div>
+
+     <div class="button-container">
+     <div class="button"><ul type="button" onclick="back1()">戻る</ul></div>
      <div class="button"><li type="button" onclick="next2()">次へ</li></div>
+    </div>
 
 </div>
 
 <!--質問3-->
 <div id="question-container3" style="display: none;">
      <div class="question_Q">どれくらいお手洗いに行きますか？</div>
-     <div class="question_B"><input type="number" min="0" id="bathroomTime">分程</div>
-     <div class="button"><li type="button" onclick="back2()">戻る</li></div>
+     <div class="question_A"><input type="number" min="0" id="bathroomTime">分程</div>
+
+     <div class="button-container">
+     <div class="button"><ul type="button" onclick="back2()">戻る</ul></div>
   <div class="button"><li type="button" onclick="calculateSalary()">確定</li></div>
+</div>
 </div>
 
 <!--回答-->
 <div id="result-container" style="display: none;">
   <div class="result"></div>
+  <div class="result2"></div>
     <div class="button"><li type="button" onclick="restart()">もう一回</li></div>
 </div>
 

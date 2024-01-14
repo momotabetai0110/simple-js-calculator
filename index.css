@@ -1,0 +1,125 @@
+.title{
+    height: 124px;
+    background-color: #cdc8b0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    font-size: xx-large;
+    color: #4e4b42; /* テキストの色 */
+}
+.question{
+    display: flex;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cdc8b0;
+    color: #4e4b42;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.question_Q{
+    font-size: 40px;
+    background-color: #cdc8b0;
+    color: #4e4b42;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 300px;
+
+}
+.question_A{
+    font-size: 40px;
+    background-color: #cdc8b0;
+    color: #4e4b42;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    padding-left: 320px;
+}
+.button-container{
+    display: flex;
+    justify-content:center
+}
+
+.button li{
+    display: inline-block; /* インラインブロック要素としてスタイルを適用 */
+    padding: 10px 20px; /* ボタンの内部余白を調整 */
+    background-color: #b4af9a; /* ボタンの背景色 */
+    color: #4e4b42; /* テキストの色 */
+    text-decoration: none; /* リンクの下線を削除 */
+    font-size: x-large;
+    border: 1px solid #b4af9a;/* ボタンのボーダー */
+    transition: background-color 0.3s ease; /* ホバーエフェクト用のトランジション */
+    margin-left: 300px;
+}
+
+.button ul{
+    display: inline-block; /* インラインブロック要素としてスタイルを適用 */
+    padding: 10px 20px; /* ボタンの内部余白を調整 */
+    background-color: #b4af9a; /* ボタンの背景色 */
+    color: #4e4b42; /* テキストの色 */
+    text-decoration: none; /* リンクの下線を削除 */
+    font-size: x-large;
+    border: 1px solid #b4af9a;/* ボタンのボーダー */
+    transition: background-color 0.3s ease; /* ホバーエフェクト用のトランジション */
+    margin-right: 300px;
+}
+.button a{
+    display: inline-block; /* インラインブロック要素としてスタイルを適用 */
+    padding: 20px 40px; /* ボタンの内部余白を調整 */
+    background-color: #b4af9a; /* ボタンの背景色 */
+    color: #4e4b42; /* テキストの色 */
+    text-decoration: none; /* リンクの下線を削除 */
+    font-size: xx-large;
+    border: 1px solid #b4af9a;/* ボタンのボーダー */
+    transition: background-color 0.3s ease; /* ホバーエフェクト用のトランジション */
+    margin-top: 200px;
+    justify-content:center
+}
+.button el{
+    display: inline-block; /* インラインブロック要素としてスタイルを適用 */
+    padding: 10px 20px; /* ボタンの内部余白を調整 */
+    background-color: #cdc8b0; /* ボタンの背景色 */
+    color: #cdc8b0; /* テキストの色 */
+    text-decoration: none; /* リンクの下線を削除 */
+    font-size: x-large;
+    border: 1px solid #cdc8b0;/* ボタンのボーダー */
+    transition: background-color 0.3s ease; /* ホバーエフェクト用のトランジション */
+    margin-right: 300px;
+}
+
+.button li:hover,
+.button ul:hover,
+.button a:hover{
+    background-color: #4e4b42; /* ホバーエフェクトで背景色を変更 */
+    color: #cd664d;
+    cursor : pointer;
+}
+.result_before{
+    background-color: #cdc8b0;
+    color: #4e4b42;
+}
+.result{
+    padding-top: 10px;
+    padding-left: 200px;
+    height: 124px;
+    background-color: #cdc8b0;
+    color: #4e4b42;
+    font-size: 50px;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color:#cdc8b0; /* お好みの色に変更してください */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
